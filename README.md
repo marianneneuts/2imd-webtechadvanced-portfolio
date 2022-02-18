@@ -1,3 +1,3 @@
-# 2imd-webtechadvanced-portfolio
+# Marianne Neuts 😎
 
-* Lab 1 [link]
+* Lab 1: https://github.com/marianneneuts/2imd-webtechadvanced-portfolio/tree/main/lab1

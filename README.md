@@ -1,3 +1,3 @@
 # 2imd-webtechadvanced-portfolio
 
-⋅⋅* Lab 1 [link]
+* Lab 1 [link]

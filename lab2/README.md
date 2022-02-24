@@ -2,4 +2,4 @@
 
 THE FUTURE
 
-![learngitbranchin](https://github.com/marianneneuts/2imd-webtechadvanced-portfolio/blob/main/lab2/screenshot-thefuture.png)
+![learngitbranchin](https://github.com/marianneneuts/2imd-webtechadvanced-portfolio/blob/main/lab2/README.md/screenshot-thefuture.png)

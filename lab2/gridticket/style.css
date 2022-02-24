@@ -1,0 +1,112 @@
+* {
+    box-sizing: border-box;
+    margin: 0; 
+}
+
+html, body {
+    height: 100%;
+}
+
+.container {
+    background-image: url(images/pexels-mark-angelo-sampan-1587927.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.overlay {
+    width: 100%;
+    height: 100%;
+    background-color: lightgray;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2fr 10fr 1fr 1fr;
+}
+
+header {
+    background-color: black;
+    color: white;
+
+    display: flex;
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 1em;
+}
+
+h1 {
+    letter-spacing: 0.3em;
+}
+
+.qrcode {
+    display: flex;
+    grid-column: 1 / -1;
+    grid-row: 2/ 3;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.qrcode img {
+    width: 300px;
+    /* height: auto; */
+}
+
+.frustrated { /* Op de mobile versie niet zichtbaar. */  
+    display: none;
+}
+
+.date {
+    grid-column: 1 / 2;
+    grid-row: 3 / span 1;
+
+    border: 1px solid darkgray;
+    padding: 1em;
+    font-size: 20px;
+
+    display: flex;
+
+    justify-content: center;
+
+    display: flex;
+    
+    justify-content: center;
+}
+
+.admit {
+    grid-column: 2 / 3;
+    grid-row: 3 / span 1;
+
+    border: 1px solid darkgray;
+    padding: 1em;
+    font-size: 20px;
+
+    display: flex;
+
+    justify-content: center;
+    
+    display: flex;
+    
+    justify-content: center;
+}
+
+.ticket {
+    grid-column: 1 / -1;
+    grid-row: 4 / -1;
+
+    border: 1px solid darkgray;
+    padding: 1em;
+    font-size: 20px;
+
+    display: flex;
+
+    justify-content: center;
+    
+    display: flex;
+    
+    justify-content: center;
+}

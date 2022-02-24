@@ -8,7 +8,7 @@ CodeSandbox: https://codesandbox.io/s/068i5e
 
 Gridticket
 
-CodeSandbox:
+CodeSandbox: https://codesandbox.io/s/i6eii0
 
 ![gridticket](https://github.com/marianneneuts/2imd-webtechadvanced-portfolio/blob/main/lab2/screenshot-gridticket.png)
 

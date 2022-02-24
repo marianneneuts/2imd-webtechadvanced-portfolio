@@ -2,42 +2,51 @@
     box-sizing: border-box;
 }
 
-main p.homework {
-    background-color: red;
-    padding: 2em;
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+}
 
+main p.homework {
+    background-color: rgba(255, 123, 222, 0.76);
     text-align: center;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 25px;
+    align-items: center;
+    padding: 0.5em;
+    margin: 0.5em;
 }
 
 main p.broken {
-    background-color: lightblue;
-    padding: 2em;
-
-    text-align: center;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 25px;
+    background-color: rgb(0, 217, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5em;
+    margin: 0.5em;
+    grid-row: 3 / span 1;
 }
 
 main p.infinity {
     background-color: yellow;
-    padding: 2em;
-
-    text-align: center;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5em;
+    margin: 0.5em;
+    grid-row: 6 / span 1;
 }
 
-@media(min-width: 800px) {
+@media(min-width: 700px) {
     main {
-        display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 1em;
     }
 
-    main p {
-        padding: 0;
-        margin: 0;
+    main p.broken {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+    }
+
+    main p.infinity {
+        grid-column: 2 / 3;
+        grid-row: 3 / 4;
     }
 }

@@ -2,13 +2,13 @@
 
 The future
 
-Codepen: https://codepen.io/marianneneuts0805/project/editor/DnJajP
+CodeSandbox:
 
 ![thefuture](https://github.com/marianneneuts/2imd-webtechadvanced-portfolio/blob/main/lab2/screenshot-thefuture.png)
 
 Gridticket
 
-Codepen:
+CodeSandbox:
 
 ![gridticket](https://github.com/marianneneuts/2imd-webtechadvanced-portfolio/blob/main/lab2/screenshot-gridticket.png)
 

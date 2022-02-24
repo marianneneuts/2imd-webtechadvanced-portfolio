@@ -15,8 +15,14 @@
     height: 100%;
     
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 2fr 10fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr; /* Kolom 1 & kolom 2 */
+    grid-template-rows: 2fr 10fr 1fr 1fr; 
+    /*
+    Rij 1,
+    rij 2,
+    rij 3,
+    rij4 
+    */
 }
 
 header {
@@ -47,7 +53,7 @@ p {
 .qrcode {
     display: flex;
     grid-column: 1 / -1;
-    grid-row: 2/ 3;
+    grid-row: 2 / 3;
 
     align-items: center;
     justify-content: center;
@@ -63,8 +69,8 @@ p {
 }
 
 .date {
-    grid-column: 1 / 2;
-    grid-row: 3 / span 1;
+    grid-column: 1 / 2; /* Kolom 1 */
+    grid-row: 3 / span 1; /* Rij 3 */
 
     border: 1px solid white;
     padding: 1em;
@@ -82,8 +88,8 @@ p {
 }
 
 .admit {
-    grid-column: 2 / 3;
-    grid-row: 3 / span 1;
+    grid-column: 2 / 2; /* Kolom 2 */
+    grid-row: 3 / span 1; /* Rij 3 */
 
     border: 1px solid white;
     padding: 1em;
@@ -130,14 +136,24 @@ p {
 
     .overlay {
         display: grid;
+<<<<<<< HEAD
         grid-template-columns: 1fr 1fr 1fr 2fr;
         grid-template-rows: 5fr 1fr 1fr ;
+=======
+        grid-template-columns: 1fr 1fr 1fr 2fr; /* Kolom 1, kolom 2, kolom 3, kolom 4 */
+        grid-template-rows: 5fr 1fr 1fr;
+        /*
+        Rij 1,
+        rij 2,
+        rij 3
+        */
+>>>>>>> lab2-grid
     }
 
     header {
         display: flex;
-        grid-column: 1 / 4;
-        grid-row: 1 / span 1;
+        grid-column: 1 / 4; /* Kolom 1 */
+        grid-row: 1 / span 1; /* Rij 1 */
         flex-direction: column-reverse;
 
         background-color: transparent;
@@ -158,8 +174,13 @@ p {
 
     .qrcode {
         display: flex;
+<<<<<<< HEAD
         grid-column: 4 / -1;
         grid-row: 1/ -1;
+=======
+        grid-column: 4 / -1; /* Kolom 4 */
+        grid-row: 1 / -1;
+>>>>>>> lab2-grid
         border: solid 1px white;
     }
 
@@ -172,8 +193,8 @@ p {
         display: block;
 
         display: flex;
-        grid-column: 1 / 4;
-        grid-row: 3 / span 1;
+        grid-column: 1 / 4; /* Kolom 1 */
+        grid-row: 3 / span 1; /* Rij 3 */
 
         justify-content: center;
         align-items: center;
@@ -184,20 +205,35 @@ p {
     }
 
     .date {
+<<<<<<< HEAD
         grid-column: 1 / 2;
         grid-row: 2 / span 1;
+=======
+        grid-column: 1 / 2; /* Kolom 1 */
+        grid-row: 2 / span 1; /* Rij 2 */
+>>>>>>> lab2-grid
         box-shadow: inset 0 0 10px lightslategrey;
     }
 
     .admit {
+<<<<<<< HEAD
         grid-column: 2 / 3;
         grid-row: 2 / span 1;
+=======
+        grid-column: 2 / 3; /* Kolom 2 */
+        grid-row: 2 / span 1; /* Rij 2 */
+>>>>>>> lab2-grid
         box-shadow: inset 0 0 10px lightslategrey;
     }
 
     .ticket {
+<<<<<<< HEAD
         grid-column: 3 / 4;
         grid-row: 2 / span 1;
+=======
+        grid-column: 3 / 3; /* Kolom 3 */
+        grid-row: 2 / span 1; /* Rij 2 */
+>>>>>>> lab2-grid
         box-shadow: inset 0 0 10px lightslategrey;
     }
 }
@@ -211,9 +247,14 @@ p {
     body {
         color: black;
     }
+<<<<<<< HEAD
  }
  
  
+=======
+}
+
+>>>>>>> lab2-grid
 /* Light mode */
 @media (prefers-color-scheme: light) {
     .overlay {

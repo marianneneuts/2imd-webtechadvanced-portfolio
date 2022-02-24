@@ -1,6 +1,7 @@
 * {
     box-sizing: border-box;
     margin: 0; 
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 
 html, body {
@@ -39,6 +40,7 @@ header {
 }
 
 h1 {
+    
     letter-spacing: 0.3em;
 }
 
@@ -109,4 +111,67 @@ h1 {
     display: flex;
     
     justify-content: center;
+}
+
+@media(min-width: 700px){
+    .container {
+        background-image: url(images/pexels-mark-angelo-sampan-1587927.jpg);
+        background-size: cover;
+        background-position: center;
+        height: 500px;
+    }
+
+    .overlay {
+        grid-template-columns: 1fr 1fr 1fr 2fr;
+        grid-template-rows: 5fr 1fr 1fr ;
+    }
+
+    header {
+        display: flex;
+        grid-column: 1 / 4;
+        grid-row: 1 / span 1;
+        flex-direction: column-reverse;
+
+        background-color: transparent;
+        border: solid 1px darkgray;
+
+        color: black;
+        font-size: 1.5em;
+        font-weight: bold;
+    }
+
+    .qrcode {
+        display: flex;
+        grid-column: 4 / -1;
+        grid-row: 1/ -1;
+        border: solid 1px darkgray;
+    }
+
+    .frustrated {   
+        display: block;
+
+        display: flex;
+        grid-column: 1 / 4;
+        grid-row: 3 / span 1;
+
+        justify-content: center;
+        align-items: center;
+
+        border: solid 1px darkgray;
+    }
+
+    .date {
+        grid-column: 1 / 2;
+        grid-row: 2 / span 1;
+    }
+
+    .admit {
+        grid-column: 2 / 3;
+        grid-row: 2 / span 1;
+    }
+
+    .ticket {
+        grid-column: 3 / 4;
+        grid-row: 2 / span 1;
+    }
 }

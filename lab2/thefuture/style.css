@@ -1,0 +1,15 @@
+* {
+    box-sizing: border-box;
+}
+
+main p.homework {
+    background-color: red;
+}
+
+main p.broken {
+    background-color: lightblue;
+}
+
+main p.infinity {
+    background-color: yellow;
+}

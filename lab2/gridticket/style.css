@@ -4,29 +4,29 @@
     font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 
-html, body {
-    height: 100%;
-}
-
 .container {
     background-image: url(images/pexels-mark-angelo-sampan-1587927.jpg);
     background-size: cover;
     background-position: center;
-    width: 100vw;
-    height: 100vh;
 }
 
 .overlay {
     width: 100%;
     height: 100%;
-    background-color: lightgray;
+    
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 2fr 10fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr; /* Kolom 1 & kolom 2 */
+    grid-template-rows: 2fr 10fr 1fr 1fr; 
+    /*
+    Rij 1,
+    rij 2,
+    rij 3,
+    rij4 
+    */
 }
 
 header {
-    background-color: black;
+    background-color: darkgoldenrod;
     color: white;
 
     display: flex;
@@ -40,21 +40,27 @@ header {
 }
 
 h1 {
-    
+    font-size: 45px;
     letter-spacing: 0.3em;
+    text-transform: uppercase;
+}
+
+p {
+    text-transform: uppercase;
+    font-weight: lighter;
 }
 
 .qrcode {
     display: flex;
     grid-column: 1 / -1;
-    grid-row: 2/ 3;
+    grid-row: 2 / 3;
 
     align-items: center;
     justify-content: center;
 }
 
 .qrcode img {
-    width: 300px;
+    width: 400px;
     /* height: auto; */
 }
 
@@ -63,10 +69,10 @@ h1 {
 }
 
 .date {
-    grid-column: 1 / 2;
-    grid-row: 3 / span 1;
+    grid-column: 1 / 2; /* Kolom 1 */
+    grid-row: 3 / span 1; /* Rij 3 */
 
-    border: 1px solid darkgray;
+    border: 1px solid white;
     padding: 1em;
     font-size: 20px;
 
@@ -77,13 +83,15 @@ h1 {
     display: flex;
     
     justify-content: center;
+
+    box-shadow: inset 0 0 10px darkgoldenrod;
 }
 
 .admit {
-    grid-column: 2 / 3;
-    grid-row: 3 / span 1;
+    grid-column: 2 / 2; /* Kolom 2 */
+    grid-row: 3 / span 1; /* Rij 3 */
 
-    border: 1px solid darkgray;
+    border: 1px solid white;
     padding: 1em;
     font-size: 20px;
 
@@ -94,13 +102,15 @@ h1 {
     display: flex;
     
     justify-content: center;
+
+    box-shadow: inset 0 0 10px darkgoldenrod;
 }
 
 .ticket {
     grid-column: 1 / -1;
     grid-row: 4 / -1;
 
-    border: 1px solid darkgray;
+    border: 1px solid white;
     padding: 1em;
     font-size: 20px;
 
@@ -111,8 +121,11 @@ h1 {
     display: flex;
     
     justify-content: center;
+
+    box-shadow: inset 0 0 10px darkgoldenrod;
 }
 
+/* Desktop */
 @media(min-width: 700px){
     .container {
         background-image: url(images/pexels-mark-angelo-sampan-1587927.jpg);
@@ -122,56 +135,102 @@ h1 {
     }
 
     .overlay {
-        grid-template-columns: 1fr 1fr 1fr 2fr;
-        grid-template-rows: 5fr 1fr 1fr ;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 2fr; /* Kolom 1, kolom 2, kolom 3, kolom 4 */
+        grid-template-rows: 5fr 1fr 1fr;
+        /*
+        Rij 1,
+        rij 2,
+        rij 3
+        */
     }
 
     header {
         display: flex;
-        grid-column: 1 / 4;
-        grid-row: 1 / span 1;
+        grid-column: 1 / 4; /* Kolom 1 */
+        grid-row: 1 / span 1; /* Rij 1 */
         flex-direction: column-reverse;
 
         background-color: transparent;
-        border: solid 1px darkgray;
+        border: solid 1px white;
 
         color: black;
         font-size: 1.5em;
         font-weight: bold;
+
+        box-shadow: inset 0 0 10px lightslategrey;
+    }
+
+    h1 {
+        font-size: 75px;
+        letter-spacing: 0.3em;
+        text-transform: uppercase;
     }
 
     .qrcode {
         display: flex;
-        grid-column: 4 / -1;
-        grid-row: 1/ -1;
-        border: solid 1px darkgray;
+        grid-column: 4 / -1; /* Kolom 4 */
+        grid-row: 1 / -1;
+        border: solid 1px white;
+    }
+
+    .qrcode img {
+        width: 400px;
+        /* height: auto; */
     }
 
     .frustrated {   
         display: block;
 
         display: flex;
-        grid-column: 1 / 4;
-        grid-row: 3 / span 1;
+        grid-column: 1 / 4; /* Kolom 1 */
+        grid-row: 3 / span 1; /* Rij 3 */
 
         justify-content: center;
         align-items: center;
 
-        border: solid 1px darkgray;
+        border: solid 1px white;
+
+        box-shadow: inset 0 0 10px lightslategrey;
     }
 
     .date {
-        grid-column: 1 / 2;
-        grid-row: 2 / span 1;
+        grid-column: 1 / 2; /* Kolom 1 */
+        grid-row: 2 / span 1; /* Rij 2 */
+        box-shadow: inset 0 0 10px lightslategrey;
     }
 
     .admit {
-        grid-column: 2 / 3;
-        grid-row: 2 / span 1;
+        grid-column: 2 / 3; /* Kolom 2 */
+        grid-row: 2 / span 1; /* Rij 2 */
+        box-shadow: inset 0 0 10px lightslategrey;
     }
 
     .ticket {
-        grid-column: 3 / 4;
-        grid-row: 2 / span 1;
+        grid-column: 3 / 3; /* Kolom 3 */
+        grid-row: 2 / span 1; /* Rij 2 */
+        box-shadow: inset 0 0 10px lightslategrey;
     }
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+    .overlay {
+        opacity: 1;
+    }
+
+    body {
+        color: black;
+    }
+}
+
+/* Light mode */
+@media (prefers-color-scheme: light) {
+    .overlay {
+        opacity: .50;
+    }
+
+    body {
+        color: white;
+    } 
 }

@@ -2,7 +2,7 @@
 
 The future
 
-CodeSandbox:
+CodeSandbox: https://codesandbox.io/s/068i5e
 
 ![thefuture](https://github.com/marianneneuts/2imd-webtechadvanced-portfolio/blob/main/lab2/screenshot-thefuture.png)
 

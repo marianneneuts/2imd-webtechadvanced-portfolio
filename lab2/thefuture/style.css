@@ -4,12 +4,40 @@
 
 main p.homework {
     background-color: red;
+    padding: 2em;
+
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 25px;
 }
 
 main p.broken {
     background-color: lightblue;
+    padding: 2em;
+
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 25px;
 }
 
 main p.infinity {
     background-color: yellow;
+    padding: 2em;
+
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 25px;
+}
+
+@media(min-width: 800px) {
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1em;
+    }
+
+    main p {
+        padding: 0;
+        margin: 0;
+    }
 }

@@ -1,5 +1,21 @@
 # Lab 2
 
-THE FUTURE
+The future
+
+Codepen:
 
 ![thefuture](https://github.com/marianneneuts/2imd-webtechadvanced-portfolio/blob/main/lab2/screenshot-thefuture.png)
+
+Gridticket
+
+Codepen:
+
+![gridticket](https://github.com/marianneneuts/2imd-webtechadvanced-portfolio/blob/main/lab2/screenshot-gridticket.png)
+
+Flexbox Froggy
+
+![flexboxfroggy](https://github.com/marianneneuts/2imd-webtechadvanced-portfolio/blob/main/lab2/screenshot-flexboxfroggy.png)
+
+Grid Garden
+
+![gridgarden](https://github.com/marianneneuts/2imd-webtechadvanced-portfolio/blob/main/lab2/screenshot-gridgarden.png)

@@ -2,14 +2,51 @@
     box-sizing: border-box;
 }
 
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
 main p.homework {
     background-color: red;
+    text-align: center;
+    align-items: center;
+    padding: 0.5em;
+    margin: 0.5em;
 }
 
 main p.broken {
     background-color: lightblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5em;
+    margin: 0.5em;
+    grid-row: 3 / span 1;
 }
 
 main p.infinity {
     background-color: yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5em;
+    margin: 0.5em;
+    grid-row: 6 / span 1;
+}
+
+@media(min-width: 700px) {
+    main {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    main p.broken {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+    }
+
+    main p.infinity {
+        grid-column: 2 / 3;
+        grid-row: 3 / 4;
+    }
 }

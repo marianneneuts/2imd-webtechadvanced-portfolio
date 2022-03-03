@@ -1,23 +1,48 @@
 export default class Todo {
-    constructor(title) {
+    constructor(priority) {
       // HINT🤩
       // use a constructor to set basic property values
-      this.title = title;
+
+      this.priority = priority;
     }
   
     createElement() {
-      let li = document.createElement("li");
-      let valueInput = document.querySelector("#add-item-text").value;
-      li.innerHTML = valueInput;
-      li.classList.add("prior-high");
-      return li;
-
       // HINT🤩
       // this method will create the HTML structure with the correct classes, based on the todo priority
       // let newNote = document.createElement("li");
       // check if the todo item includes a priority like medium: to generate the correct classnames
       // don't forget to hook up an event listener for the click event
       // return newNote;
+
+      let li = document.createElement("li");
+      let valueInput = document.querySelector("#add-item-text").value;
+
+      let todoElement;
+
+      if(valueInput.includes("high: ")){
+        li.classList.add("prior-high");
+      }
+
+      else if(valueInput.includes("medium: ")){
+        li.classList.add("prior-medium");
+      }
+
+      else if(valueInput.includes("low: ")){
+        li.classList.add("prior-low");
+      }
+
+      if(valueInput.includes("high:")|| valueInput.includes("medium:")||valueInput.includes("low:")){
+        todoElement = valueInput.replace(/(.*):/,"");
+      }
+
+      else {
+        todoElement = valueInput;
+      }
+
+      li.innerHTML = todoElement;
+      li.addEventListener("click", this.markDone.bind(li));
+
+      return li;
     }
   
     markDone(e) {
@@ -30,6 +55,7 @@ export default class Todo {
       // HINT🤩
       // this function should append the note to the screen somehow
       let todo = this.createElement(); // should return a full <li> with the right classes and innerHTML
+      
       document.querySelector("#todo-list").appendChild(todo)
     }
   

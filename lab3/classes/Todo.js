@@ -1,9 +1,7 @@
 export default class Todo {
-    constructor(priority) {
+    constructor() {
       // HINT🤩
       // use a constructor to set basic property values
-
-      this.priority = priority;
     }
   
     createElement() {
@@ -45,10 +43,15 @@ export default class Todo {
       return li;
     }
   
-    markDone(e) {
+    markDone(li) {
       // HINT🤩
       // this function should mark the current todo as done, by adding the correct CSS class
       // if the item is clicked, but was already marked as done, remove the item from the list
+
+      this.classList.add("done");
+      this.addEventListener("click", function(e){
+        this.remove();
+      })
     }
   
     add() {

@@ -66,6 +66,8 @@ export default class Todo {
       // HINT🤩
       // localStorage only supports strings, not arrays
       // if you want to store arrays, look at JSON.parse and JSON.stringify
+      
+      localStorage.setItem(this.title, JSON.stringify(this));
     }
-  }
+}
   

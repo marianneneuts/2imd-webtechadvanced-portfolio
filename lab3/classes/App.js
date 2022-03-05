@@ -43,6 +43,7 @@ export default class App {
         let todo = new Todo();
         todo.add();
         // console.log(todo);
+        todo.saveToStorage();
 
         this.reset();
       }
@@ -52,6 +53,20 @@ export default class App {
       // HINT🤩
       // load all items from storage here and add them to the screen
       // use the Todo class to create the elements
+
+      // useful link: https://stackoverflow.com/questions/17745292/how-to-retrieve-all-localstorage-items-without-knowing-the-keys-in-advance
+
+      let items = [],
+        keys = Object.keys(localStorage),
+        i = keys.length;
+    
+        while( i-- ) {
+          items.push(localStorage.getItem(keys[i]));
+        }
+        for(let item of items) {
+          let todo = new Todo(item.title);
+          todo.add();
+        }
     }
   
     reset() {
@@ -59,5 +74,5 @@ export default class App {
 
       document.querySelector("#add-item-text").value = "";
     }
-  }
+}
   

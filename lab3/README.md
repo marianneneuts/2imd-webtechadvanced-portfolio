@@ -1,6 +1,6 @@
 # Lab 3
 
-CodeSandbox:
+CodePen: https://codepen.io/marianneneuts0805/pen/QWORxMZ
 
 # ES2016 - Exponentiation Operator
 

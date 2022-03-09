@@ -1,6 +1,6 @@
 # Lab 3
 
-CodeSandbox:
+CodeSandbox: https://codesandbox.io/s/aged-smoke-wd4msx?file=/index.js
 
 # ES2016 - Exponentiation Operator
 

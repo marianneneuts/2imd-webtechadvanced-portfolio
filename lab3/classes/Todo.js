@@ -34,7 +34,7 @@ export default class Todo {
     li.prototype = this;
     li.addEventListener("click", this.markDone.bind(li));
 
-    if(this.done == true){
+    if(this.done === true){
       li.classList.add("done");
     }
 

@@ -1,9 +1,10 @@
 export default class Todo {
-  constructor(title) {
+  constructor(title, done = false) {
     // HINT🤩
     // use a constructor to set basic property values
 
     this.title = title;
+    this.done = done;
   }
 
   createElement() {
@@ -15,37 +16,44 @@ export default class Todo {
     // return newNote;
 
     let li = document.createElement("li");
+    li.innerHTML = this.title;
 
-    if (this.title.startsWith("high:")) {
+    if(li.innerHTML.includes("high:")){
       li.classList.add("prior-high");
-      this.title = this.title.replace("high:", "");
-    } else if (this.title.startsWith("medium:")) {
+    } 
+    else if (li.innerHTML.includes("medium:")) {
       li.classList.add("prior-medium");
-      this.title = this.title.replace("medium:", "");
-    } else if (this.title.startsWith("low:")) {
+    } 
+    else if (li.innerHTML.includes("low:")) {
       li.classList.add("prior-low");
-      this.title = this.title.replace("low:", "");
-    } else {
+    } 
+    else {
       li.classList.add("prior-medium");
-      this.title = this.title.replace("medium:", "");
     }
 
-    li.addEventListener("click", this.markDone);
-    li.innerHTML = this.title;
+    li.prototype = this;
+    li.addEventListener("click", this.markDone.bind(li));
+
+    if(this.done == true){
+      li.classList.add("done");
+    }
 
     return li;
   }
 
-  markDone(e) {
+  markDone() {
     // HINT🤩
     // this function should mark the current todo as done, by adding the correct CSS class
     // if the item is clicked, but was already marked as done, remove the item from the list
 
-    if (this.classList.contains("done")) {
+    if(this.classList.contains("done")){
       this.remove();
-      localStorage.removeItem(this.innerHTML);
-    } else {
+      localStorage.removeItem(this.prototype.title);
+    } 
+    else {
       this.classList.add("done");
+      this.prototype.done = true;
+      this.prototype.saveToStorage();
     }
   }
 

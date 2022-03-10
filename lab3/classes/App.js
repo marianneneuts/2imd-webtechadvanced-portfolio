@@ -25,6 +25,7 @@ export default class App {
 
     document.querySelector("#add-item-text")
     document.addEventListener("keyup", this.createItem.bind(this));
+    // console.log(this);
   }
 
   createItem(e) {
@@ -54,11 +55,16 @@ export default class App {
 
     // useful link: https://stackoverflow.com/questions/17745292/how-to-retrieve-all-localstorage-items-without-knowing-the-keys-in-advance
 
-    let items = Object.keys(localStorage);
+    let items = [],
+      keys = Object.keys(localStorage),
+      i = keys.length;
 
-    for (let i = 0; i < items.length; i++) {
-      let storageItem = JSON.parse(localStorage.getItem(items[i]));
-      let todo = new Todo(storageItem.title, storageItem.done);
+    while (i--) {
+      items.push(JSON.parse(localStorage.getItem(keys[i])));;
+    }
+    
+    for (let item of items) {
+      let todo = new Todo(item.title, item.done);
       todo.add();
     }
   }

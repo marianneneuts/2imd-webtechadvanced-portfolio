@@ -18,23 +18,24 @@ export default class Todo {
     let li = document.createElement("li");
     li.innerHTML = this.title;
 
-    if(li.innerHTML.includes("high:")){
+    if (this.title.startsWith("high:")) {
       li.classList.add("prior-high");
-    } 
-    else if (li.innerHTML.includes("medium:")) {
+      li.innerHTML = this.title.slice(5);
+    } else if (this.title.startsWith("medium:")) {
       li.classList.add("prior-medium");
-    } 
-    else if (li.innerHTML.includes("low:")) {
+      li.innerHTML = this.title.slice(7);
+    } else if (this.title.startsWith("low:")) {
       li.classList.add("prior-low");
-    } 
-    else {
+      li.innerHTML = this.title.slice(4);
+    } else {
       li.classList.add("prior-medium");
+      li.innerHTML = this.title;
     }
 
     li.prototype = this;
     li.addEventListener("click", this.markDone.bind(li));
 
-    if(this.done === true){
+    if (this.done === true) {
       li.classList.add("done");
     }
 
@@ -46,11 +47,10 @@ export default class Todo {
     // this function should mark the current todo as done, by adding the correct CSS class
     // if the item is clicked, but was already marked as done, remove the item from the list
 
-    if(this.classList.contains("done")){
+    if (this.classList.contains("done")) {
       this.remove();
       localStorage.removeItem(this.prototype.title);
-    } 
-    else {
+    } else {
       this.classList.add("done");
       this.prototype.done = true;
       this.prototype.saveToStorage();

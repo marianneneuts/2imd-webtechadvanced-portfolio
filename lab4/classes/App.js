@@ -45,7 +45,56 @@ export default class App {
         // console.log(temp);
 
         document.querySelector("h1").innerHTML = summary;
-        document.querySelector("h2").innerHTML = temp + "°C";
+        document.querySelector("h2").innerHTML = "It is " + temp + "°C.";
+
+        if(temp <= 10){
+            this.getColdWeather();
+        }
+        else {
+            this.getHotWeather();
+        }
+    }
+
+    getColdWeather() {
+        // console.log("Cold weather.");
+        let url = "https://api.disneyapi.dev/characters";
+
+        fetch(url)
+        .then( result => {
+            return result.json();
+        })
+        .then((json)=>{
+            this.printColdWeather(json);
+        });
+    }
+
+    getHotWeather() {
+        // console.log("Hot weather.");
+        let url = "https://api.disneyapi.dev/characters";
+
+        fetch(url)
+        .then( result => {
+            return result.json();
+        })
+        .then((json)=>{
+            console.log(json);
+            this.printHotWeather(json);
+        });
+    }
+
+    printColdWeather(json) {
+        let name = json.data[22].name;
+        let imageUrl = json.data[22].imageUrl;
+        document.querySelector("#image").src = imageUrl;
+        document.querySelector("#message").innerHTML = "..." + name;  
+    }
+
+    printHotWeather(json) {
+        let name = json.data[6].name;
+        console.log(name);
+        let imageUrl = json.data[6].imageUrl;
+        document.querySelector("#image").src = imageUrl;
+        document.querySelector("#message").innerHTML = "..." + name;
     }
 
     locationError(err) {

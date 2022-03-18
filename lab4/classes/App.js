@@ -44,7 +44,7 @@ export default class App {
         let temp = Math.round(json.main.temp);
         // console.log(temp);
 
-        document.querySelector("h1").innerHTML = summary;
+        document.querySelector("h1").innerHTML = "There are a " + summary + ".";
         document.querySelector("h2").innerHTML = "It is " + temp + "°C.";
 
         if(temp <= 10){
@@ -64,6 +64,7 @@ export default class App {
             return result.json();
         })
         .then((json)=>{
+            // console.log(json);
             this.printColdWeather(json);
         });
     }
@@ -77,24 +78,26 @@ export default class App {
             return result.json();
         })
         .then((json)=>{
-            console.log(json);
+            // console.log(json);
             this.printHotWeather(json);
         });
     }
 
     printColdWeather(json) {
-        let name = json.data[22].name;
-        let imageUrl = json.data[22].imageUrl;
+        let name = json.data[2].name;
+        let imageUrl = json.data[2].imageUrl;
+        document.querySelector("#app").style.backgroundColor = "#EB626C"; 
         document.querySelector("#image").src = imageUrl;
-        document.querySelector("#message").innerHTML = "..." + name;  
+        document.querySelector("#message").innerHTML = "According to " + name + "👾, it's too cold! 🧤❄️"; 
     }
 
     printHotWeather(json) {
-        let name = json.data[6].name;
+        let name = json.data[42].name;
         console.log(name);
-        let imageUrl = json.data[6].imageUrl;
+        let imageUrl = json.data[42].imageUrl;
+        document.querySelector("#app").style.backgroundColor = "#FDC685"; 
         document.querySelector("#image").src = imageUrl;
-        document.querySelector("#message").innerHTML = "..." + name;
+        document.querySelector("#message").innerHTML = "According to " + name + "🧜🏻‍♀️, it's time for a refreshing dive! 🥽🦀";
     }
 
     locationError(err) {
